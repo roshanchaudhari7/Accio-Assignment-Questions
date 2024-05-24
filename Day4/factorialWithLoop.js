@@ -1,14 +1,14 @@
 const readline = require('readline').createInterface({
     input: process.stdin,
     output: process.stdout
-});
+  });
   
 readline.question('', n => {
-    n = parseInt(n);
-    let sum = 0;
-    for (let num = 2; num <= n; num += 2) {
-        sum += num;
-    }
-    console.log(sum);
     readline.close();
+    
+    let prod = 1;
+    for(let num = 1; num <= n; num++){
+        prod *= num;
+    }
+    console.log(prod);
 });

@@ -27,6 +27,14 @@ function logic(input) {
 }
   
 function countVisibleRoofs(heights) {
-      // Write your code here
-    
+    // Write your code here
+    let count = 0;
+    let tallestBuildings = -Infinity;
+    for(let i = 0; i < heights.length; i++){
+        if(heights[i] >= tallestBuildings) {
+            count++;
+        }
+        tallestBuildings = Math.max(tallestBuildings, heights[i]);
+    }
+    return count;
 }
